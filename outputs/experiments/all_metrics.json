@@ -1,0 +1,512 @@
+{
+  "elapsed_seconds": 9.496140003204346,
+  "n_experiments": 20,
+  "seeds": [
+    0,
+    1
+  ],
+  "results": [
+    {
+      "name": "01_parity_separable_vs_entangled",
+      "family": "classification",
+      "dataset": "parity_patch",
+      "n_qubits": 4,
+      "group": "Identity",
+      "entanglement_depth": 1,
+      "notes": "Parity: separable Ry vs entangled CX vs RZZ ring.",
+      "seeds": [
+        0,
+        1
+      ],
+      "per_seed": [
+        {
+          "quantum_separable_ry": 0.875,
+          "quantum_entangled_cx": 0.875,
+          "quantum_rzz_ring": 0.875
+        },
+        {
+          "quantum_separable_ry": 0.875,
+          "quantum_entangled_cx": 0.875,
+          "quantum_rzz_ring": 0.875
+        }
+      ]
+    },
+    {
+      "name": "02_parity_entangled_vs_rbf",
+      "family": "classification",
+      "dataset": "parity_patch",
+      "n_qubits": 4,
+      "group": "Identity",
+      "entanglement_depth": 1,
+      "notes": "Parity: entangled quantum vs RBF baseline.",
+      "seeds": [
+        0,
+        1
+      ],
+      "per_seed": [
+        {
+          "quantum_entangled_cx": 0.875,
+          "quantum_rzz_ring": 0.875,
+          "classical_rbf": 0.5416666666666666
+        },
+        {
+          "quantum_entangled_cx": 0.875,
+          "quantum_rzz_ring": 0.875,
+          "classical_rbf": 0.4583333333333333
+        }
+      ]
+    },
+    {
+      "name": "03_parity_entangled_vs_polynomial",
+      "family": "classification",
+      "dataset": "parity_patch",
+      "n_qubits": 4,
+      "group": "Identity",
+      "entanglement_depth": 1,
+      "notes": "Parity: vs polynomial kernel.",
+      "seeds": [
+        0,
+        1
+      ],
+      "per_seed": [
+        {
+          "quantum_entangled_cx": 0.875,
+          "quantum_rzz_ring": 0.875,
+          "classical_polynomial": 0.6666666666666666
+        },
+        {
+          "quantum_entangled_cx": 0.875,
+          "quantum_rzz_ring": 0.875,
+          "classical_polynomial": 0.4583333333333333
+        }
+      ]
+    },
+    {
+      "name": "04_parity_noise05",
+      "family": "classification",
+      "dataset": "parity_patch",
+      "n_qubits": 4,
+      "group": "Identity",
+      "entanglement_depth": 1,
+      "notes": "Parity with low noise.",
+      "seeds": [
+        0,
+        1
+      ],
+      "per_seed": [
+        {
+          "quantum_entangled_cx": 0.6666666666666666,
+          "quantum_rzz_ring": 0.75,
+          "classical_rbf": 0.5416666666666666,
+          "classical_polynomial": 0.6666666666666666
+        },
+        {
+          "quantum_entangled_cx": 0.75,
+          "quantum_rzz_ring": 0.75,
+          "classical_rbf": 0.5,
+          "classical_polynomial": 0.4583333333333333
+        }
+      ]
+    },
+    {
+      "name": "05_parity_noise15",
+      "family": "classification",
+      "dataset": "parity_patch",
+      "n_qubits": 4,
+      "group": "Identity",
+      "entanglement_depth": 1,
+      "notes": "Parity with higher noise.",
+      "seeds": [
+        0,
+        1
+      ],
+      "per_seed": [
+        {
+          "quantum_entangled_cx": 0.5833333333333334,
+          "quantum_rzz_ring": 0.6666666666666666,
+          "classical_rbf": 0.5416666666666666,
+          "classical_polynomial": 0.5833333333333334
+        },
+        {
+          "quantum_entangled_cx": 0.5416666666666666,
+          "quantum_rzz_ring": 0.4583333333333333,
+          "classical_rbf": 0.5416666666666666,
+          "classical_polynomial": 0.6666666666666666
+        }
+      ]
+    },
+    {
+      "name": "06_d4shape_groupavg",
+      "family": "classification",
+      "dataset": "d4_shapes",
+      "n_qubits": 4,
+      "group": "D4",
+      "entanglement_depth": 1,
+      "notes": "D4-shape: identity-group vs D4 group-averaged quantum kernel.",
+      "seeds": [
+        0,
+        1
+      ],
+      "per_seed": [
+        {
+          "quantum_entangled_cx": 0.5833333333333334,
+          "quantum_d4_entangled": 0.75
+        },
+        {
+          "quantum_entangled_cx": 0.8333333333333334,
+          "quantum_d4_entangled": 0.5
+        }
+      ]
+    },
+    {
+      "name": "07_d4shape_d4_vs_rbf",
+      "family": "classification",
+      "dataset": "d4_shapes",
+      "n_qubits": 4,
+      "group": "D4",
+      "entanglement_depth": 1,
+      "notes": "D4 group quantum kernel vs classical RBF.",
+      "seeds": [
+        0,
+        1
+      ],
+      "per_seed": [
+        {
+          "quantum_entangled_cx": 0.5833333333333334,
+          "quantum_d4_entangled": 0.75,
+          "classical_rbf": 0.3333333333333333
+        },
+        {
+          "quantum_entangled_cx": 0.8333333333333334,
+          "quantum_d4_entangled": 0.5,
+          "classical_rbf": 0.5
+        }
+      ]
+    },
+    {
+      "name": "08_d4shape_c4_only",
+      "family": "classification",
+      "dataset": "d4_shapes",
+      "n_qubits": 4,
+      "group": "C4",
+      "entanglement_depth": 1,
+      "notes": "D4 dataset, only C4 averaging used; tests if reflections help.",
+      "seeds": [
+        0,
+        1
+      ],
+      "per_seed": [
+        {
+          "quantum_entangled_cx": 0.5833333333333334,
+          "quantum_c4_entangled": 0.3333333333333333,
+          "classical_rbf": 0.3333333333333333
+        },
+        {
+          "quantum_entangled_cx": 0.8333333333333334,
+          "quantum_c4_entangled": 0.5,
+          "classical_rbf": 0.5
+        }
+      ]
+    },
+    {
+      "name": "09_d4shape_full_d4",
+      "family": "classification",
+      "dataset": "d4_shapes",
+      "n_qubits": 4,
+      "group": "D4",
+      "entanglement_depth": 1,
+      "notes": "D4 dataset, full D4 averaging vs classical.",
+      "seeds": [
+        0,
+        1
+      ],
+      "per_seed": [
+        {
+          "quantum_entangled_cx": 0.5833333333333334,
+          "quantum_d4_entangled": 0.75,
+          "classical_rbf": 0.3333333333333333,
+          "classical_polynomial": 0.3333333333333333
+        },
+        {
+          "quantum_entangled_cx": 0.8333333333333334,
+          "quantum_d4_entangled": 0.5,
+          "classical_rbf": 0.5,
+          "classical_polynomial": 0.5
+        }
+      ]
+    },
+    {
+      "name": "10_anomaly_local",
+      "family": "anomaly",
+      "dataset": "defect_patches",
+      "n_qubits": 4,
+      "group": "Identity",
+      "entanglement_depth": 1,
+      "notes": "One-class anomaly: local bright squares.",
+      "seeds": [
+        0,
+        1
+      ],
+      "per_seed": [
+        {
+          "quantum_entangled_cx": 0.2592592592592593,
+          "quantum_rzz_ring": 0.19444444444444445,
+          "classical_rbf": 1.0,
+          "classical_polynomial": 0.5
+        },
+        {
+          "quantum_entangled_cx": 0.15555555555555553,
+          "quantum_rzz_ring": 0.18518518518518515,
+          "classical_rbf": 1.0,
+          "classical_polynomial": 0.5
+        }
+      ]
+    },
+    {
+      "name": "11_anomaly_color_confound",
+      "family": "anomaly",
+      "dataset": "defect_patches",
+      "n_qubits": 4,
+      "group": "Identity",
+      "entanglement_depth": 1,
+      "notes": "Anomaly with global brightness confounder.",
+      "seeds": [
+        0,
+        1
+      ],
+      "per_seed": [
+        {
+          "quantum_entangled_cx": 0.22142857142857142,
+          "quantum_rzz_ring": 0.17857142857142855,
+          "classical_rbf": 0.9714285714285715,
+          "classical_polynomial": 0.5
+        },
+        {
+          "quantum_entangled_cx": 0.1764705882352941,
+          "quantum_rzz_ring": 0.21008403361344535,
+          "classical_rbf": 0.9663865546218487,
+          "classical_polynomial": 0.5
+        }
+      ]
+    },
+    {
+      "name": "12_anomaly_rotated",
+      "family": "anomaly",
+      "dataset": "defect_patches",
+      "n_qubits": 4,
+      "group": "Identity",
+      "entanglement_depth": 1,
+      "notes": "Anomaly with randomly placed defects.",
+      "seeds": [
+        0,
+        1
+      ],
+      "per_seed": [
+        {
+          "quantum_entangled_cx": 0.888888888888889,
+          "quantum_rzz_ring": 0.7703703703703704,
+          "classical_rbf": 1.0,
+          "classical_polynomial": 0.5
+        },
+        {
+          "quantum_entangled_cx": 0.4285714285714285,
+          "quantum_rzz_ring": 0.3529411764705882,
+          "classical_rbf": 1.0,
+          "classical_polynomial": 0.5
+        }
+      ]
+    },
+    {
+      "name": "13_ablation_nq_3",
+      "family": "classification",
+      "dataset": "d4_shapes",
+      "n_qubits": 3,
+      "group": "D4",
+      "entanglement_depth": 1,
+      "notes": "Ablation: n_qubits = 3.",
+      "seeds": [
+        0,
+        1
+      ],
+      "per_seed": [
+        {
+          "quantum_entangled_cx": 1.0,
+          "quantum_d4_entangled": 0.3333333333333333,
+          "classical_rbf": 0.3333333333333333
+        },
+        {
+          "quantum_entangled_cx": 0.5,
+          "quantum_d4_entangled": 1.0,
+          "classical_rbf": 0.5
+        }
+      ]
+    },
+    {
+      "name": "14_ablation_nq_4",
+      "family": "classification",
+      "dataset": "d4_shapes",
+      "n_qubits": 4,
+      "group": "D4",
+      "entanglement_depth": 1,
+      "notes": "Ablation: n_qubits = 4.",
+      "seeds": [
+        0,
+        1
+      ],
+      "per_seed": [
+        {
+          "quantum_entangled_cx": 0.5833333333333334,
+          "quantum_d4_entangled": 0.75,
+          "classical_rbf": 0.3333333333333333
+        },
+        {
+          "quantum_entangled_cx": 0.8333333333333334,
+          "quantum_d4_entangled": 0.5,
+          "classical_rbf": 0.5
+        }
+      ]
+    },
+    {
+      "name": "15_ablation_nq_5",
+      "family": "classification",
+      "dataset": "d4_shapes",
+      "n_qubits": 5,
+      "group": "D4",
+      "entanglement_depth": 1,
+      "notes": "Ablation: n_qubits = 5.",
+      "seeds": [
+        0,
+        1
+      ],
+      "per_seed": [
+        {
+          "quantum_entangled_cx": 0.9583333333333334,
+          "quantum_d4_entangled": 1.0,
+          "classical_rbf": 0.3333333333333333
+        },
+        {
+          "quantum_entangled_cx": 0.5833333333333334,
+          "quantum_d4_entangled": 0.75,
+          "classical_rbf": 0.5
+        }
+      ]
+    },
+    {
+      "name": "16_ablation_depth_0",
+      "family": "classification",
+      "dataset": "parity_patch",
+      "n_qubits": 4,
+      "group": "Identity",
+      "entanglement_depth": 0,
+      "notes": "Ablation: entanglement depth = 0.",
+      "seeds": [
+        0,
+        1
+      ],
+      "per_seed": [
+        {
+          "quantum_entangled_cx": 0.875,
+          "classical_rbf": 0.5416666666666666
+        },
+        {
+          "quantum_entangled_cx": 0.875,
+          "classical_rbf": 0.4583333333333333
+        }
+      ]
+    },
+    {
+      "name": "17_ablation_depth_1",
+      "family": "classification",
+      "dataset": "parity_patch",
+      "n_qubits": 4,
+      "group": "Identity",
+      "entanglement_depth": 1,
+      "notes": "Ablation: entanglement depth = 1.",
+      "seeds": [
+        0,
+        1
+      ],
+      "per_seed": [
+        {
+          "quantum_entangled_cx": 0.875,
+          "classical_rbf": 0.5416666666666666
+        },
+        {
+          "quantum_entangled_cx": 0.875,
+          "classical_rbf": 0.4583333333333333
+        }
+      ]
+    },
+    {
+      "name": "18_ablation_depth_2",
+      "family": "classification",
+      "dataset": "parity_patch",
+      "n_qubits": 4,
+      "group": "Identity",
+      "entanglement_depth": 2,
+      "notes": "Ablation: entanglement depth = 2.",
+      "seeds": [
+        0,
+        1
+      ],
+      "per_seed": [
+        {
+          "quantum_entangled_cx": 0.875,
+          "classical_rbf": 0.5416666666666666
+        },
+        {
+          "quantum_entangled_cx": 0.875,
+          "classical_rbf": 0.4583333333333333
+        }
+      ]
+    },
+    {
+      "name": "19_ablation_group_identity",
+      "family": "classification",
+      "dataset": "d4_shapes",
+      "n_qubits": 4,
+      "group": "Identity",
+      "entanglement_depth": 1,
+      "notes": "Ablation: no group averaging.",
+      "seeds": [
+        0,
+        1
+      ],
+      "per_seed": [
+        {
+          "quantum_entangled_cx": 0.5833333333333334,
+          "classical_rbf": 0.3333333333333333
+        },
+        {
+          "quantum_entangled_cx": 0.8333333333333334,
+          "classical_rbf": 0.5
+        }
+      ]
+    },
+    {
+      "name": "20_ablation_group_d4_full",
+      "family": "classification",
+      "dataset": "d4_shapes",
+      "n_qubits": 4,
+      "group": "D4",
+      "entanglement_depth": 1,
+      "notes": "Ablation: full D4 group averaging (paired with 19).",
+      "seeds": [
+        0,
+        1
+      ],
+      "per_seed": [
+        {
+          "quantum_entangled_cx": 0.5833333333333334,
+          "quantum_d4_entangled": 0.75,
+          "classical_rbf": 0.3333333333333333
+        },
+        {
+          "quantum_entangled_cx": 0.8333333333333334,
+          "quantum_d4_entangled": 0.5,
+          "classical_rbf": 0.5
+        }
+      ]
+    }
+  ]
+}

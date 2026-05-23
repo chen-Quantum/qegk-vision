@@ -1,0 +1,14 @@
+numpy
+scipy
+pandas
+matplotlib
+pillow
+scikit-learn
+scikit-image
+qiskit
+qiskit-aer
+pylatexenc
+imageio
+imageio-ffmpeg
+tqdm
+pytest
