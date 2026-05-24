@@ -3,16 +3,12 @@
 > Simulator-based research prototype. We combine a quantum fidelity kernel
 > with averaging over a finite symmetry group (mainly D4, the symmetries of
 > the square) and benchmark against matched classical kernels (RBF,
-> polynomial, cosine, random Fourier features). We report a **quantum
-> advantage signal** - cases where the entangled quantum kernel beats the
-> best classical baseline under matched low-data / symmetry-heavy
-> constraints. We make **no claim of true quantum advantage.**
-
-![Q-EGK hero](outputs/release_media/readme_hero.png)
+> polynomial, cosine, random Fourier features). As an **exploratory
+> comparison**, we report where the entangled quantum kernel matches or
+> exceeds matched classical baselines under low-data / symmetry-heavy
+> conditions in this simulator. This is **not** a quantum-advantage claim.
 
 ## Pipeline
-
-![Pipeline](outputs/release_media/pipeline_overview.png)
 
 For each image x:
 1. apply a finite symmetry group action (D4 / C4 / identity),
@@ -104,7 +100,7 @@ pytest -q
 Plus optional real-data experiments (Fashion-MNIST low-data,
 MedMNIST low-data) if their dependencies and cached data are present.
 
-## Quantum advantage signal
+## Matched-baseline comparison
 
 For each experiment, define
 ```
@@ -112,10 +108,8 @@ advantage_signal = mean_{seeds} (metric_best_quantum - metric_best_classical)
 ```
 where "best" is the method with the highest mean within the family.
 We report mean, std, and a bootstrap 95% CI on the **paired** seed
-differences. An advantage CI that includes zero is consistent with no
-advantage. See `outputs/release_media/advantage_summary.png` for the
-per-experiment bar chart and the full numerical table in
-`outputs/experiments/bootstrap_summary.csv`.
+differences. A comparison interval that includes zero is consistent with
+no difference.
 
 The full long table per experiment / per method lives in
 `outputs/experiments/all_metrics.csv` and the nested raw payload in
@@ -130,15 +124,15 @@ The full long table per experiment / per method lives in
 - **Small data.** Training sets of 24-40 samples each; classical baselines
   may close the gap at higher data.
 - **No noise model.** A real quantum backend would estimate `K` from
-  finite shots; the advantage may erode quickly.
+  finite shots; any measured gap may erode quickly.
 - **Single architecture family.** Classical baselines are kernel methods.
   Deep models on the same data are out of scope here.
 
 ## Honesty note
 
-We do **not** claim a true quantum advantage. We report a *quantum
-advantage signal*: matched-baseline performance difference on a
-controlled simulator-based benchmark. A real-world claim requires a
+We do **not** claim any quantum advantage. We report only a
+matched-baseline performance difference on a controlled simulator-based
+benchmark, as an exploratory signal. A real-world claim would require a
 problem with no efficient classical algorithm and experimental evidence
 at scales the classical method cannot match - neither of which this
 prototype provides.
